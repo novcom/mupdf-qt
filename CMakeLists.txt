@@ -23,7 +23,7 @@ set (LIBMUPDF_SOURCES src/mupdf-document.cpp
                       src/mupdf-outline.cpp
                       src/mupdf-textbox.cpp
                       )
-add_library (${LIBMUPDF} STATIC ${LIBMUPDF_SOURCES})
+add_library (${LIBMUPDF} SHARED ${LIBMUPDF_SOURCES})
 target_link_libraries (${LIBMUPDF} ${MuPDF_LIBRARIES})
 qt5_use_modules (${LIBMUPDF} Gui)
 
