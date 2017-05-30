@@ -1,0 +1,10 @@
+#ifndef MUPDFQTLIB_H
+#define MUPDFQTLIB_H
+
+#if defined(MUPDFQTLIB_LIBRARY)
+#define MUPDFQTLIB_EXPORT Q_DECL_EXPORT
+#else
+#define MUPDFQTLIB_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // MUPDFQTLIB_H

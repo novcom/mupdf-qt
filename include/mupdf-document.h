@@ -1,6 +1,8 @@
 #ifndef MUPDF_DOCUMENT_H
 #define MUPDF_DOCUMENT_H
 
+#include "mupdf-qtlib.h"
+
 #include <QByteArray>
 
 class QString;
@@ -13,10 +15,10 @@ class DocumentPrivate;
 class Page;
 class Outline;
 
-Document * loadDocument(const QString &filePath);
-Document * loadDocument(const QByteArray &bytes);
+MUPDFQTLIB_EXPORT Document * loadDocument(const QString &filePath);
+MUPDFQTLIB_EXPORT Document * loadDocument(const QByteArray &bytes);
 
-class Document
+class MUPDFQTLIB_EXPORT Document
 {
 public:
     ~Document();
@@ -50,8 +52,8 @@ private:
 
     DocumentPrivate *d;
 
-friend Document *loadDocument(const QString &filePath);
-friend Document *loadDocument(const QByteArray &bytes);
+MUPDFQTLIB_EXPORT friend Document *loadDocument(const QString &filePath);
+MUPDFQTLIB_EXPORT friend Document *loadDocument(const QByteArray &bytes);
 };
 
 } // end namespace MuPDF

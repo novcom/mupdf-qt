@@ -1,6 +1,8 @@
 #ifndef MUPDF_PAGE_H
 #define MUPDF_PAGE_H
 
+#include "mupdf-qtlib.h"
+
 #include <QList>
 
 class QImage;
@@ -59,7 +61,7 @@ QRectF mapFromOrigin(const QRectF &rect, float scaleX, float scaleY, float rotat
  * @note When you are doing something with this page, make sure the Document
  * who generate this page is valid.
  */
-class Page
+class MUPDFQTLIB_EXPORT Page
 {
 public:
     ~Page();

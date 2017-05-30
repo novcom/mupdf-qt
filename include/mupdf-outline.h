@@ -1,6 +1,10 @@
 #ifndef MUPDF_OUTLINE_H
 #define MUPDF_OUTLINE_H
 
+#include "mupdf-qtlib.h"
+
+#include <qobject.h>
+
 class QString;
 
 namespace MuPDF
@@ -16,7 +20,7 @@ class Link;
  * @brief A tree of the outline of a document (also known
  *        as table of contents).
  */
-class Outline
+class MUPDFQTLIB_EXPORT Outline
 {
 public:
     ~Outline();

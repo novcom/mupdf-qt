@@ -1,6 +1,10 @@
 #ifndef MUPDF_TEXTBOX_H
 #define MUPDF_TEXTBOX_H
 
+#include "mupdf-qtlib.h"
+
+#include <qobject.h>
+
 class QRectF;
 class QString;
 
@@ -18,7 +22,7 @@ class TextBoxPrivate;
  * it (perhaps as it crosses columns or tables), a line may be represented
  * by multiple text boxes.
  */
-class TextBox
+class MUPDFQTLIB_EXPORT TextBox
 {
 public:
     ~TextBox();

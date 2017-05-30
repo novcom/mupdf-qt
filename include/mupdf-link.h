@@ -1,6 +1,10 @@
 #ifndef MUPDF_LINK_H
 #define MUPDF_LINK_H
 
+#include "mupdf-qtlib.h"
+
+#include <qobject.h>
+
 class QRectF;
 class QString;
 
@@ -9,7 +13,7 @@ namespace MuPDF
 
 class LinkPrivate;
 
-class Link
+class MUPDFQTLIB_EXPORT Link
 {
 public:
     enum LinkType
@@ -38,7 +42,7 @@ friend class OutlineItemPrivate;
 /**
  * @brief Goto a position in current file.
  */
-class LinkGoto : public Link
+class MUPDFQTLIB_EXPORT LinkGoto : public Link
 {
 public:
     LinkType linkType() const {return Goto;}
@@ -56,7 +60,7 @@ friend class OutlineItemPrivate;
 /**
  * @brief A URI link.
  */
-class LinkURI : public Link
+class MUPDFQTLIB_EXPORT LinkURI : public Link
 {
 public:
     LinkType linkType() const {return URI;}
@@ -72,7 +76,7 @@ friend class OutlineItemPrivate;
 /**
  * @brief Launch a file (a document or a executable).
  */
-class LinkLaunch : public Link
+class MUPDFQTLIB_EXPORT LinkLaunch : public Link
 {
 public:
     LinkType linkType() const {return Launch;}
@@ -89,7 +93,7 @@ friend class OutlineItemPrivate;
 /**
  * @brief Named action to perform.
  */
-class LinkNamed : public Link
+class MUPDFQTLIB_EXPORT LinkNamed : public Link
 {
 public:
     LinkType linkType() const {return Named;}
@@ -104,7 +108,7 @@ friend class OutlineItemPrivate;
 /**
  * @brief Goto a position in another file.
  */
-class LinkGotoR : public LinkGoto
+class MUPDFQTLIB_EXPORT LinkGotoR : public LinkGoto
 {
 public:
     LinkType linkType() const {return GotoR;}
