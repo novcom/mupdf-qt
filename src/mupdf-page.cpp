@@ -10,19 +10,19 @@ extern "C" {
 #include <QImage>
 #include <QSizeF>
 
-static void clear_bgr_samples_with_value(
-        unsigned char *samples, int size,
-        int b, int g, int r, int a)
-{
-    int i = 0;
+//static void clear_bgr_samples_with_value(
+//        unsigned char *samples, int size,
+//        int b, int g, int r, int a)
+//{
+//    int i = 0;
 
-    while (i < size) {
-        *(samples + i++) = b;
-        *(samples + i++) = g;
-        *(samples + i++) = r;
-        *(samples + i++) = a;
-    }
-}
+//    while (i < size) {
+//        *(samples + i++) = b;
+//        *(samples + i++) = g;
+//        *(samples + i++) = r;
+//        *(samples + i++) = a;
+//    }
+//}
 
 static void clear_rgb_samples_with_value(
         unsigned char *samples, int size,
